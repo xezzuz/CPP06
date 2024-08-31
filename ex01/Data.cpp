@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/29 19:01:35 by nazouz            #+#    #+#             */
-/*   Updated: 2024/08/30 10:21:17 by nazouz           ###   ########.fr       */
+/*   Created: 2024/08/30 13:27:16 by nazouz            #+#    #+#             */
+/*   Updated: 2024/08/30 13:45:05 by nazouz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#include "Data.hpp"
 
-#include <iostream>
-#include <string>
-#include <iomanip>
+Data::Data() {
+	x = 1337;
+	y = 42;
+}
 
-class ScalarConverter {
-	private:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter& original);
-		ScalarConverter&	operator=(const ScalarConverter& original);
-		~ScalarConverter();
-	
-	public:
-		static void		convert(const std::string str);
-};
+Data::Data(const Data& original) {
+	x = original.x;
+	y = original.y;
+}
 
-#endif
+Data&	Data::operator=(const Data& original) {
+	x = original.x;
+	y = original.y;
+	return *this;
+}
+
+Data::~Data() {
+
+}
+
+void	Data::printVars() const {
+	std::cout << "x = " << x << ", y = " << y << std::endl;
+}

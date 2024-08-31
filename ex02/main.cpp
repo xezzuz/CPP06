@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/29 19:01:35 by nazouz            #+#    #+#             */
-/*   Updated: 2024/08/30 10:21:17 by nazouz           ###   ########.fr       */
+/*   Created: 2024/08/30 17:45:00 by nazouz            #+#    #+#             */
+/*   Updated: 2024/08/30 18:01:06 by nazouz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
-#include <iostream>
-#include <string>
-#include <iomanip>
-
-class ScalarConverter {
-	private:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter& original);
-		ScalarConverter&	operator=(const ScalarConverter& original);
-		~ScalarConverter();
+int main(void) {
+	{
+		Base	baseObj;
+		Base*	basePtr;
 	
-	public:
-		static void		convert(const std::string str);
-};
-
-#endif
+		basePtr = baseObj.generate();
+		baseObj.identify(basePtr);
+	}
+	{
+		Base	baseObj;
+		Base*	basePtr;
+	
+		basePtr = baseObj.generate();
+		baseObj.identify(*basePtr);
+	}
+}

@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   B.cpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/29 19:01:35 by nazouz            #+#    #+#             */
-/*   Updated: 2024/08/30 10:21:17 by nazouz           ###   ########.fr       */
+/*   Created: 2024/08/30 14:04:03 by nazouz            #+#    #+#             */
+/*   Updated: 2024/08/30 14:04:12 by nazouz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#include "B.hpp"
 
-#include <iostream>
-#include <string>
-#include <iomanip>
+B::B() {
 
-class ScalarConverter {
-	private:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter& original);
-		ScalarConverter&	operator=(const ScalarConverter& original);
-		~ScalarConverter();
-	
-	public:
-		static void		convert(const std::string str);
-};
+}
 
-#endif
+B::~B() {
+
+}
