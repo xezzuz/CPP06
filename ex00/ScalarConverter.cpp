@@ -6,7 +6,7 @@
 /*   By: nazouz <nazouz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 19:04:03 by nazouz            #+#    #+#             */
-/*   Updated: 2024/08/31 17:00:25 by nazouz           ###   ########.fr       */
+/*   Updated: 2024/08/31 17:27:05 by nazouz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void		converInteger(const std::string& str) {
 			std::cout << "char: '" << static_cast<char>(n) << "'" << std::endl;
 		else
 			std::cout << "char: Non displayable" << std::endl;
-		if (n < std::numeric_limits<int>::max() && n > std::numeric_limits<int>::min())
+		if (n <= std::numeric_limits<int>::max() && n >= std::numeric_limits<int>::min())
 			std::cout << "int: " << n << std::endl;
 		else
 			std::cout << "int: impossible" << std::endl;
@@ -135,7 +135,7 @@ void		convertFloat(std::string str) {
 			std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
 		else
 			std::cout << "char: Non displayable" << std::endl;
-		if (f < std::numeric_limits<int>::max() && f > std::numeric_limits<int>::min())
+		if (f <= std::numeric_limits<int>::max() && f >= std::numeric_limits<int>::min())
 			std::cout << "int : " << static_cast<int>(f) << std::endl;
 		else
 			std::cout << "int : impossible" << std::endl;
@@ -158,7 +158,7 @@ void		convertDouble(std::string str) {
 			std::cout << "char: '" << static_cast<char>(d) << "'" << std::endl;
 		else
 			std::cout << "char: Non displayable" << std::endl;
-		if (d < std::numeric_limits<int>::max() && d > std::numeric_limits<int>::min())
+		if (d <= std::numeric_limits<int>::max() && d >= std::numeric_limits<int>::min())
 			std::cout << "int : " << static_cast<int>(d) << std::endl;
 		else
 			std::cout << "int : impossible" << std::endl;
